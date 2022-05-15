@@ -21,12 +21,8 @@ const submitBtn = document.getElementById("text-submit")
 const inputEle = document.getElementById("text-input")
 const messageContainer = document.querySelector(".message-container")
 
-const parse = (string) => {
-  return JSON.parse(string)
-}
-const stringify = (string) => {
-  return JSON.stringify(string)
-}
+const parse = (string) => JSON.parse(string)
+const stringify = (string) => JSON.stringify(string)
 
 const uniqueKey = () => {
   function s4() {
