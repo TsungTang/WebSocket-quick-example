@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Websocket demo</title>
+
+    <style>
+      body {
+        color: #0d5959;
+      }
+      .message-container {
+        min-height: 600px;
+        width: 900px;
+        border: 1px solid #dddddd;
+        padding: 4px 10px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .message-container div {
+        margin: 15px 0;
+      }
+      .message-container .other {
+        margin-left: auto;
+      }
+      .message-container .user {
+      }
+
+      .message-container div span {
+        color: white;
+        border-radius: 15px;
+        padding: 5px 15px;
+        margin: 0 10px;
+        display: block;
+        max-width: 300px;
+        word-wrap: break-word;
+      }
+
+      .message-container .me-text {
+        background: #2050df;
+      }
+      .message-container .other-text {
+        background: #1ab3b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <input id="text-input" type="text" />
+      <input id="text-submit" type="submit" value="submit" />
+      <div class="message-container"></div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
