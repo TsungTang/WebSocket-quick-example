@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npx nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -11,6 +12,7 @@
     "nodemon": "^2.0.16",
     "socket.io": "^4.5.0"
   },
+  "type": "module",
   "author": "",
   "license": "ISC"
 }

@@ -43,7 +43,7 @@ ws.onmessage = (event) => {
   div.classList.add(selfMessage ? "user" : "other")
 
   div.innerHTML = `${selfMessage ? "me" : "other"}:  <span class="${
-    selfMessage ? "me-text" : "other-text"
+    selfMessage ? "my-text" : "other-text"
   }">${data.msg}</span>    ${formatDate(new Date())}`
   messageContainer.appendChild(div)
 }
@@ -58,10 +58,6 @@ ws.onclose = () => {
 
 window.onbeforeunload = function () {
   ws.send(stringify({ key, msg: "disconnected!" }))
-}
-
-ws.onclose = () => {
-  console.log("close connection")
 }
 
 submitBtn.addEventListener("click", (e) => {
