@@ -22,7 +22,7 @@ io.on('connection', (socket) => {
   console.log('a user connected');
 
   socket.on("send-message", (arg, callback) => {
-    console.log(arg); // "world"
+    console.log(arg); 
     socket.broadcast.emit('receive-message', arg)
   });
   socket.on('disconnect', () => {
@@ -34,13 +34,3 @@ io.on('connection', (socket) => {
 server.listen(3000, () => {
   console.log('listening on *:3000');
 });
-
-// const io = new Server({
-//   /* options */
-// })
-
-// io.on("connection", (socket) => {
-//   // ...
-// })
-
-// io.listen(3000)
