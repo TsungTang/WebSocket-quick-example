@@ -1,3 +1,6 @@
+import { io } from "https://cdn.socket.io/4.4.1/socket.io.esm.min.js";
+
+
 function padTo2Digits(num) {
   return num.toString().padStart(2, "0")
 }
@@ -21,8 +24,6 @@ const submitBtn = document.getElementById("text-submit")
 const inputEle = document.getElementById("text-input")
 const messageContainer = document.querySelector(".message-container")
 
-const parse = (string) => JSON.parse(string)
-const stringify = (string) => JSON.stringify(string)
 
 const socket = io("ws://localhost:3000")
 
